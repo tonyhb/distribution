@@ -2,7 +2,6 @@ package storage
 
 import (
 	"path"
-	"sync"
 
 	"github.com/docker/distribution"
 	"github.com/docker/distribution/context"
@@ -45,64 +44,30 @@ func (s *signatureStore) Get(dgst digest.Digest) ([][]byte, error) {
 		return nil, err
 	}
 
-	var wg sync.WaitGroup
-	type result struct {
-		index     int
-		signature []byte
-		err       error
+	if len(signaturePaths) < 1 {
+		context.GetLogger(s.ctx).Errorf("no signatures found at path: %q", signaturesPath)
+		return [][]byte{}, nil
 	}
-	ch := make(chan result)
+
+	sigPath := signaturePaths[0]
 
 	bs := s.linkedBlobStore(s.ctx, dgst)
-	for i, sigPath := range signaturePaths {
-		sigdgst, err := digest.ParseDigest("sha256:" + path.Base(sigPath))
-		if err != nil {
-			context.GetLogger(s.ctx).Errorf("could not get digest from path: %q, skipping", sigPath)
-			continue
-		}
 
-		wg.Add(1)
-		go func(idx int, sigdgst digest.Digest) {
-			defer wg.Done()
-			context.GetLogger(s.ctx).
-				Debugf("fetching signature %q", sigdgst)
-
-			r := result{index: idx}
-
-			if p, err := bs.Get(s.ctx, sigdgst); err != nil {
-				context.GetLogger(s.ctx).
-					Errorf("error fetching signature %q: %v", sigdgst, err)
-				r.err = err
-			} else {
-				r.signature = p
-			}
-
-			ch <- r
-		}(i, sigdgst)
-	}
-	done := make(chan struct{})
-	go func() {
-		wg.Wait()
-		close(done)
-	}()
-
-	// aggregrate the results
-	signatures := make([][]byte, len(signaturePaths))
-loop:
-	for {
-		select {
-		case result := <-ch:
-			signatures[result.index] = result.signature
-			if result.err != nil && err == nil {
-				// only set the first one.
-				err = result.err
-			}
-		case <-done:
-			break loop
-		}
+	sigdgst, err := digest.ParseDigest("sha256:" + path.Base(sigPath))
+	if err != nil {
+		context.GetLogger(s.ctx).Errorf("could not get digest from path: %q, skipping", sigPath)
+		return [][]byte{}, nil
 	}
 
-	return signatures, err
+	context.GetLogger(s.ctx).Debugf("fetching signature %q", sigdgst)
+
+	signature, err := bs.Get(s.ctx, sigdgst)
+	if err != nil {
+		context.GetLogger(s.ctx).Errorf("error fetching signature %q: %v", sigdgst, err)
+		return [][]byte{}, nil
+	}
+
+	return [][]byte{signature}, err
 }
 
 func (s *signatureStore) Put(dgst digest.Digest, signatures ...[]byte) error {
