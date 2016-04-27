@@ -285,7 +285,11 @@ func (d *driver) GetContent(ctx context.Context, path string) ([]byte, error) {
 
 // PutContent stores the []byte content at a location designated by "path".
 func (d *driver) PutContent(ctx context.Context, path string, contents []byte) error {
-	err := d.Conn.ObjectPutBytes(d.Container, d.swiftPath(path), contents, contentType)
+	buf := bytes.NewBuffer(contents)
+	headers := swift.Headers{
+		"Content-Length": strconv.Itoa(len(contents)),
+	}
+	_, err := d.Conn.ObjectPut(d.Container, d.swiftPath(path), buf, true, "", contentType, headers)
 	if err == swift.ObjectNotFound {
 		return storagedriver.PathNotFoundError{Path: path}
 	}
@@ -813,7 +817,10 @@ func (sw *segmentWriter) Write(p []byte) (int, error) {
 		if offset+chunkSize > len(p) {
 			chunkSize = len(p) - offset
 		}
-		_, err := sw.conn.ObjectPut(sw.container, getSegmentPath(sw.segmentsPath, sw.segmentNumber), bytes.NewReader(p[offset:offset+chunkSize]), false, "", contentType, nil)
+		headers := swift.Headers{
+			"Content-Length": strconv.Itoa(chunkSize),
+		}
+		_, err := sw.conn.ObjectPut(sw.container, getSegmentPath(sw.segmentsPath, sw.segmentNumber), bytes.NewReader(p[offset:offset+chunkSize]), false, "", contentType, headers)
 		if err != nil {
 			return n, err
 		}
