@@ -10,9 +10,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/docker/distribution/context"
-	"github.com/docker/distribution/registry/auth"
-	"github.com/docker/distribution/registry/auth/token"
+	"github.com/tonyhb/distribution/context"
+	"github.com/tonyhb/distribution/registry/auth"
+	"github.com/tonyhb/distribution/registry/auth/token"
 	"github.com/docker/libtrust"
 )
 

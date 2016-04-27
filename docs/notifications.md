@@ -80,9 +80,9 @@ repository | string | Repository identifies the named repository.
 fromRepository | string |  FromRepository identifies the named repository which a blob was mounted from if appropriate.
 url | string | URL provides a direct link to the content.
 tag | string | Tag identifies a tag name in tag events
-request | [RequestRecord](https://godoc.org/github.com/docker/distribution/notifications#RequestRecord) | Request covers the request that generated the event.
-actor | [ActorRecord](https://godoc.org/github.com/docker/distribution/notifications#ActorRecord). |  Actor specifies the agent that initiated the event. For most situations, this could be from the authorization context of the request.
-source | [SourceRecord](https://godoc.org/github.com/docker/distribution/notifications#SourceRecord) |  Source identifies the registry node that generated the event. Put differently, while the actor "initiates" the event, the source "generates" it.
+request | [RequestRecord](https://godoc.org/github.com/tonyhb/distribution/notifications#RequestRecord) | Request covers the request that generated the event.
+actor | [ActorRecord](https://godoc.org/github.com/tonyhb/distribution/notifications#ActorRecord). |  Actor specifies the agent that initiated the event. For most situations, this could be from the authorization context of the request.
+source | [SourceRecord](https://godoc.org/github.com/tonyhb/distribution/notifications#SourceRecord) |  Source identifies the registry node that generated the event. Put differently, while the actor "initiates" the event, the source "generates" it.
 
 
 
@@ -346,5 +346,5 @@ which can be wired up to achieve interesting behavior. If this system doesn't
 provide acceptable guarantees, adding a transactional `Sink` to the registry
 is a possibility, although it may have an effect on request service time.
 Please see the
-[godoc](http://godoc.org/github.com/docker/distribution/notifications#Sink)
+[godoc](http://godoc.org/github.com/tonyhb/distribution/notifications#Sink)
 for more information.

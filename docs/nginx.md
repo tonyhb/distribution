@@ -49,7 +49,7 @@ X-Forwarded-For   $proxy_add_x_forwarded_for;
 X-Forwarded-Proto $scheme;
 ```
 
-Otherwise nginx will reset the ELB's values, and the requests will not be routed properly. For more information, see [#970](https://github.com/docker/distribution/issues/970).
+Otherwise nginx will reset the ELB's values, and the requests will not be routed properly. For more information, see [#970](https://github.com/tonyhb/distribution/issues/970).
 
 ## Setting things up
 

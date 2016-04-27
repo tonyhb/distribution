@@ -6,7 +6,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/docker/distribution"
+	"github.com/tonyhb/distribution"
 )
 
 var expectedManifestListSerialization = []byte(`{

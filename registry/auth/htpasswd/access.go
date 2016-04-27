@@ -11,8 +11,8 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/docker/distribution/context"
-	"github.com/docker/distribution/registry/auth"
+	"github.com/tonyhb/distribution/context"
+	"github.com/tonyhb/distribution/registry/auth"
 )
 
 var (

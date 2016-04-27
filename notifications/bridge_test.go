@@ -3,12 +3,12 @@ package notifications
 import (
 	"testing"
 
-	"github.com/docker/distribution"
-	"github.com/docker/distribution/digest"
-	"github.com/docker/distribution/manifest/schema1"
-	"github.com/docker/distribution/reference"
-	"github.com/docker/distribution/registry/api/v2"
-	"github.com/docker/distribution/uuid"
+	"github.com/tonyhb/distribution"
+	"github.com/tonyhb/distribution/digest"
+	"github.com/tonyhb/distribution/manifest/schema1"
+	"github.com/tonyhb/distribution/reference"
+	"github.com/tonyhb/distribution/registry/api/v2"
+	"github.com/tonyhb/distribution/uuid"
 	"github.com/docker/libtrust"
 )
 

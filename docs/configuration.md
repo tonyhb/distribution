@@ -45,7 +45,7 @@ Typically, create a new configuration file from scratch, and call it `config.yml
       -v `pwd`/config.yml:/etc/docker/registry/config.yml \
       registry:2
 
-You can (and probably should) use [this as a starting point](https://github.com/docker/distribution/blob/master/cmd/registry/config-example.yml).
+You can (and probably should) use [this as a starting point](https://github.com/tonyhb/distribution/blob/master/cmd/registry/config-example.yml).
 
 ## List of configuration options
 
@@ -1785,7 +1785,7 @@ The above configures the registry instance to run on port `5000`, binding to
 verbose.
 
 A similar simple configuration is available at
-[config-example.yml](https://github.com/docker/distribution/blob/master/cmd/registry/config-example.yml).
+[config-example.yml](https://github.com/tonyhb/distribution/blob/master/cmd/registry/config-example.yml).
 Both are generally useful for local development.
 
 

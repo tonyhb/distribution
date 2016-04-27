@@ -6,9 +6,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/docker/distribution/context"
-	"github.com/docker/distribution/reference"
-	"github.com/docker/distribution/registry/storage/driver"
+	"github.com/tonyhb/distribution/context"
+	"github.com/tonyhb/distribution/reference"
+	"github.com/tonyhb/distribution/registry/storage/driver"
 )
 
 // onTTLExpiryFunc is called when a repository's TTL expires

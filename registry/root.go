@@ -1,7 +1,7 @@
 package registry
 
 import (
-	"github.com/docker/distribution/version"
+	"github.com/tonyhb/distribution/version"
 	"github.com/spf13/cobra"
 )
 

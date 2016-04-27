@@ -3,11 +3,11 @@ package handlers
 import (
 	"net/http"
 
-	"github.com/docker/distribution"
-	"github.com/docker/distribution/context"
-	"github.com/docker/distribution/digest"
-	"github.com/docker/distribution/registry/api/errcode"
-	"github.com/docker/distribution/registry/api/v2"
+	"github.com/tonyhb/distribution"
+	"github.com/tonyhb/distribution/context"
+	"github.com/tonyhb/distribution/digest"
+	"github.com/tonyhb/distribution/registry/api/errcode"
+	"github.com/tonyhb/distribution/registry/api/v2"
 	"github.com/gorilla/handlers"
 )
 

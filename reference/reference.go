@@ -25,7 +25,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/docker/distribution/digest"
+	"github.com/tonyhb/distribution/digest"
 )
 
 const (

@@ -42,8 +42,8 @@ If you want to understand, you should read [How to Write Go Code](https://golang
 ## Checkout the Docker Distribution source tree
 
     mkdir -p $GOPATH/src/github.com/docker
-    git clone https://github.com/docker/distribution.git $GOPATH/src/github.com/docker/distribution
-    cd $GOPATH/src/github.com/docker/distribution
+    git clone https://github.com/tonyhb/distribution.git $GOPATH/src/github.com/tonyhb/distribution
+    cd $GOPATH/src/github.com/tonyhb/distribution
 
 ## Build the binary
 

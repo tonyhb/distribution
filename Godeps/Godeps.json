@@ -1,5 +1,5 @@
 {
-	"ImportPath": "github.com/docker/distribution",
+	"ImportPath": "github.com/tonyhb/distribution",
 	"GoVersion": "go1.6",
 	"GodepVersion": "v60",
 	"Packages": [

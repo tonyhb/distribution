@@ -3,8 +3,8 @@ package middleware
 import (
 	"fmt"
 
-	"github.com/docker/distribution"
-	"github.com/docker/distribution/context"
+	"github.com/tonyhb/distribution"
+	"github.com/tonyhb/distribution/context"
 )
 
 // InitFunc is the type of a RegistryMiddleware factory function and is

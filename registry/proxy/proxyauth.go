@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/docker/distribution/registry/client/auth"
+	"github.com/tonyhb/distribution/registry/client/auth"
 )
 
 const tokenURL = "https://auth.docker.io/token"

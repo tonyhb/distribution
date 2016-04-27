@@ -1,11 +1,11 @@
 package storage
 
 import (
-	"github.com/docker/distribution"
-	"github.com/docker/distribution/context"
-	"github.com/docker/distribution/reference"
-	"github.com/docker/distribution/registry/storage/cache"
-	storagedriver "github.com/docker/distribution/registry/storage/driver"
+	"github.com/tonyhb/distribution"
+	"github.com/tonyhb/distribution/context"
+	"github.com/tonyhb/distribution/reference"
+	"github.com/tonyhb/distribution/registry/storage/cache"
+	storagedriver "github.com/tonyhb/distribution/registry/storage/driver"
 	"github.com/docker/libtrust"
 )
 

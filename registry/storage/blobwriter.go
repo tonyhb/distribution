@@ -8,10 +8,10 @@ import (
 	"time"
 
 	"github.com/Sirupsen/logrus"
-	"github.com/docker/distribution"
-	"github.com/docker/distribution/context"
-	"github.com/docker/distribution/digest"
-	storagedriver "github.com/docker/distribution/registry/storage/driver"
+	"github.com/tonyhb/distribution"
+	"github.com/tonyhb/distribution/context"
+	"github.com/tonyhb/distribution/digest"
+	storagedriver "github.com/tonyhb/distribution/registry/storage/driver"
 )
 
 var (

@@ -5,8 +5,8 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/docker/distribution"
-	"github.com/docker/distribution/context"
+	"github.com/tonyhb/distribution"
+	"github.com/tonyhb/distribution/context"
 )
 
 type mockTagStore struct {

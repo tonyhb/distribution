@@ -4,10 +4,10 @@ import (
 	"fmt"
 
 	"encoding/json"
-	"github.com/docker/distribution"
-	"github.com/docker/distribution/context"
-	"github.com/docker/distribution/digest"
-	"github.com/docker/distribution/manifest/schema2"
+	"github.com/tonyhb/distribution"
+	"github.com/tonyhb/distribution/context"
+	"github.com/tonyhb/distribution/digest"
+	"github.com/tonyhb/distribution/manifest/schema2"
 )
 
 //schema2ManifestHandler is a ManifestHandler that covers schema2 manifests.

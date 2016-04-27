@@ -5,13 +5,13 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/docker/distribution"
-	ctxu "github.com/docker/distribution/context"
-	"github.com/docker/distribution/digest"
-	"github.com/docker/distribution/reference"
-	"github.com/docker/distribution/registry/api/errcode"
-	"github.com/docker/distribution/registry/api/v2"
-	"github.com/docker/distribution/registry/storage"
+	"github.com/tonyhb/distribution"
+	ctxu "github.com/tonyhb/distribution/context"
+	"github.com/tonyhb/distribution/digest"
+	"github.com/tonyhb/distribution/reference"
+	"github.com/tonyhb/distribution/registry/api/errcode"
+	"github.com/tonyhb/distribution/registry/api/v2"
+	"github.com/tonyhb/distribution/registry/storage"
 	"github.com/gorilla/handlers"
 )
 

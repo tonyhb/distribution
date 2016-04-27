@@ -90,7 +90,7 @@ alpha-numeric           := /[a-z0-9]+/
 separator               := /[_.]|__|[-]*/
 ```
 Full reference grammar is defined
-(here)[https://godoc.org/github.com/docker/distribution/reference]. Currently
+(here)[https://godoc.org/github.com/tonyhb/distribution/reference]. Currently
 the scope name grammar is a subset of the reference grammar without support
 for hostnames.
 

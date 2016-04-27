@@ -6,8 +6,8 @@ import (
 	"path"
 	"strings"
 
-	"github.com/docker/distribution/context"
-	"github.com/docker/distribution/registry/storage/driver"
+	"github.com/tonyhb/distribution/context"
+	"github.com/tonyhb/distribution/registry/storage/driver"
 )
 
 // ErrFinishedWalk is used when the called walk function no longer wants

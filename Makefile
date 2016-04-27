@@ -28,7 +28,7 @@ version/version.go:
 GO15VENDOREXPERIMENT := 1
 
 # Package list
-PKGS := $(shell go list -tags "${DOCKER_BUILDTAGS}" ./... | grep -v ^github.com/docker/distribution/vendor/)
+PKGS := $(shell go list -tags "${DOCKER_BUILDTAGS}" ./... | grep -v ^github.com/tonyhb/distribution/vendor/)
 
 # Resolving binary dependencies for specific targets
 GOLINT := $(shell which golint || echo '')
