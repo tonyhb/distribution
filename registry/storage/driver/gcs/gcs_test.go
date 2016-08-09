@@ -1,5 +1,3 @@
-// +build include_gcs
-
 package gcs
 
 import (
