@@ -10,7 +10,7 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/docker/distribution/manifest/schema1"
+	"github.com/tonyhb/distribution/manifest/schema1"
 )
 
 // TestHTTPSink mocks out an http endpoint and notifies it under a couple of

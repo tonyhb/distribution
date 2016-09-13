@@ -8,8 +8,8 @@ import (
 	"net/url"
 	"strconv"
 
-	"github.com/docker/distribution/registry/api/errcode"
-	"github.com/docker/distribution/registry/storage/driver"
+	"github.com/tonyhb/distribution/registry/api/errcode"
+	"github.com/tonyhb/distribution/registry/storage/driver"
 	"github.com/gorilla/handlers"
 )
 

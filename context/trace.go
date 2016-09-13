@@ -4,7 +4,7 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/docker/distribution/uuid"
+	"github.com/tonyhb/distribution/uuid"
 )
 
 // WithTrace allocates a traced timing span in a new context. This allows a
@@ -32,7 +32,7 @@ import (
 // If the function ran for roughly 1s, such a usage would emit a log message
 // as follows:
 //
-// 	INFO[0001] this will be the log message  trace.duration=1.004575763s trace.func=github.com/docker/distribution/context.traceOperation trace.id=<id> ...
+// 	INFO[0001] this will be the log message  trace.duration=1.004575763s trace.func=github.com/tonyhb/distribution/context.traceOperation trace.id=<id> ...
 //
 // Notice that the function name is automatically resolved, along with the
 // package and a trace id is emitted that can be linked with parent ids.

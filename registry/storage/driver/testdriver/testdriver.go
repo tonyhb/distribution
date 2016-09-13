@@ -1,10 +1,10 @@
 package testdriver
 
 import (
-	"github.com/docker/distribution/context"
-	storagedriver "github.com/docker/distribution/registry/storage/driver"
-	"github.com/docker/distribution/registry/storage/driver/factory"
-	"github.com/docker/distribution/registry/storage/driver/inmemory"
+	"github.com/tonyhb/distribution/context"
+	storagedriver "github.com/tonyhb/distribution/registry/storage/driver"
+	"github.com/tonyhb/distribution/registry/storage/driver/factory"
+	"github.com/tonyhb/distribution/registry/storage/driver/inmemory"
 )
 
 const driverName = "testdriver"

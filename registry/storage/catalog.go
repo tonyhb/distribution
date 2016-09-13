@@ -6,8 +6,8 @@ import (
 	"path"
 	"strings"
 
-	"github.com/docker/distribution/context"
-	"github.com/docker/distribution/registry/storage/driver"
+	"github.com/tonyhb/distribution/context"
+	"github.com/tonyhb/distribution/registry/storage/driver"
 )
 
 // errFinishedWalk signals an early exit to the walk when the current query

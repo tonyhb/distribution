@@ -3,9 +3,9 @@ package storage
 import (
 	"path"
 
-	"github.com/docker/distribution/context"
-	"github.com/docker/distribution/digest"
-	"github.com/docker/distribution/registry/storage/driver"
+	"github.com/tonyhb/distribution/context"
+	"github.com/tonyhb/distribution/digest"
+	"github.com/tonyhb/distribution/registry/storage/driver"
 )
 
 // vacuum contains functions for cleaning up repositories and blobs

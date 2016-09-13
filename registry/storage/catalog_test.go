@@ -5,11 +5,11 @@ import (
 	"io"
 	"testing"
 
-	"github.com/docker/distribution"
-	"github.com/docker/distribution/context"
-	"github.com/docker/distribution/registry/storage/cache/memory"
-	"github.com/docker/distribution/registry/storage/driver"
-	"github.com/docker/distribution/registry/storage/driver/inmemory"
+	"github.com/tonyhb/distribution"
+	"github.com/tonyhb/distribution/context"
+	"github.com/tonyhb/distribution/registry/storage/cache/memory"
+	"github.com/tonyhb/distribution/registry/storage/driver"
+	"github.com/tonyhb/distribution/registry/storage/driver/inmemory"
 )
 
 type setupEnv struct {

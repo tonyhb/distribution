@@ -3,11 +3,11 @@ package storage
 import (
 	"testing"
 
-	"github.com/docker/distribution"
-	"github.com/docker/distribution/context"
-	"github.com/docker/distribution/manifest"
-	"github.com/docker/distribution/manifest/schema2"
-	"github.com/docker/distribution/registry/storage/driver/inmemory"
+	"github.com/tonyhb/distribution"
+	"github.com/tonyhb/distribution/context"
+	"github.com/tonyhb/distribution/manifest"
+	"github.com/tonyhb/distribution/manifest/schema2"
+	"github.com/tonyhb/distribution/registry/storage/driver/inmemory"
 )
 
 func TestVerifyManifestForeignLayer(t *testing.T) {

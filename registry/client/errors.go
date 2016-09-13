@@ -8,7 +8,7 @@ import (
 	"io/ioutil"
 	"net/http"
 
-	"github.com/docker/distribution/registry/api/errcode"
+	"github.com/tonyhb/distribution/registry/api/errcode"
 )
 
 // ErrNoErrorsInBody is returned when an HTTP response body parses to an empty

@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/docker/distribution/context"
+	"github.com/tonyhb/distribution/context"
 )
 
 // Version is a string representing the storage driver version, of the form
@@ -36,7 +36,7 @@ const CurrentVersion Version = "0.1"
 // StorageDriver defines methods that a Storage Driver must implement for a
 // filesystem-like key/value object storage. Storage Drivers are automatically
 // registered via an internal registration mechanism, and generally created
-// via the StorageDriverFactory interface (https://godoc.org/github.com/docker/distribution/registry/storage/driver/factory).
+// via the StorageDriverFactory interface (https://godoc.org/github.com/tonyhb/distribution/registry/storage/driver/factory).
 // Please see the aforementioned factory package for example code showing how to get an instance
 // of a StorageDriver
 type StorageDriver interface {

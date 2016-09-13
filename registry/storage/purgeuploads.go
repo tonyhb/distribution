@@ -6,9 +6,9 @@ import (
 	"time"
 
 	log "github.com/Sirupsen/logrus"
-	"github.com/docker/distribution/context"
-	storageDriver "github.com/docker/distribution/registry/storage/driver"
-	"github.com/docker/distribution/uuid"
+	"github.com/tonyhb/distribution/context"
+	storageDriver "github.com/tonyhb/distribution/registry/storage/driver"
+	"github.com/tonyhb/distribution/uuid"
 )
 
 // uploadData stored the location of temporary files created during a layer upload

@@ -10,10 +10,10 @@ import (
 	"time"
 
 	"github.com/Sirupsen/logrus"
-	"github.com/docker/distribution/context"
-	"github.com/docker/distribution/registry/api/errcode"
-	"github.com/docker/distribution/registry/auth"
-	_ "github.com/docker/distribution/registry/auth/htpasswd"
+	"github.com/tonyhb/distribution/context"
+	"github.com/tonyhb/distribution/registry/api/errcode"
+	"github.com/tonyhb/distribution/registry/auth"
+	_ "github.com/tonyhb/distribution/registry/auth/htpasswd"
 	"github.com/docker/libtrust"
 	"github.com/gorilla/mux"
 )

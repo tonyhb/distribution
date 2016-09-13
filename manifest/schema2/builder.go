@@ -1,9 +1,9 @@
 package schema2
 
 import (
-	"github.com/docker/distribution"
-	"github.com/docker/distribution/context"
-	"github.com/docker/distribution/digest"
+	"github.com/tonyhb/distribution"
+	"github.com/tonyhb/distribution/context"
+	"github.com/tonyhb/distribution/digest"
 )
 
 // builder is a type for constructing manifests.
