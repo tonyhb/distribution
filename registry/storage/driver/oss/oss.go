@@ -22,13 +22,13 @@ import (
 	"strings"
 	"time"
 
-	"github.com/docker/distribution/context"
+	"github.com/tonyhb/distribution/context"
 
 	"github.com/Sirupsen/logrus"
 	"github.com/denverdino/aliyungo/oss"
-	storagedriver "github.com/docker/distribution/registry/storage/driver"
-	"github.com/docker/distribution/registry/storage/driver/base"
-	"github.com/docker/distribution/registry/storage/driver/factory"
+	storagedriver "github.com/tonyhb/distribution/registry/storage/driver"
+	"github.com/tonyhb/distribution/registry/storage/driver/base"
+	"github.com/tonyhb/distribution/registry/storage/driver/factory"
 )
 
 const driverName = "oss"

@@ -4,10 +4,10 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/docker/distribution"
-	"github.com/docker/distribution/context"
-	"github.com/docker/distribution/digest"
-	"github.com/docker/distribution/registry/storage/cache"
+	"github.com/tonyhb/distribution"
+	"github.com/tonyhb/distribution/context"
+	"github.com/tonyhb/distribution/digest"
+	"github.com/tonyhb/distribution/registry/storage/cache"
 )
 
 // CheckBlobDescriptorCache takes a cache implementation through a common set

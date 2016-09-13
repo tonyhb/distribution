@@ -5,9 +5,9 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/docker/distribution/context"
-	"github.com/docker/distribution/registry/storage/driver"
-	"github.com/docker/distribution/registry/storage/driver/inmemory"
+	"github.com/tonyhb/distribution/context"
+	"github.com/tonyhb/distribution/registry/storage/driver"
+	"github.com/tonyhb/distribution/registry/storage/driver/inmemory"
 )
 
 func testFS(t *testing.T) (driver.StorageDriver, map[string]string, context.Context) {

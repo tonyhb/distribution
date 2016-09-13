@@ -4,11 +4,11 @@ import (
 	"fmt"
 
 	"errors"
-	"github.com/docker/distribution"
-	"github.com/docker/distribution/context"
-	"github.com/docker/distribution/digest"
-	"github.com/docker/distribution/manifest"
-	"github.com/docker/distribution/reference"
+	"github.com/tonyhb/distribution"
+	"github.com/tonyhb/distribution/context"
+	"github.com/tonyhb/distribution/digest"
+	"github.com/tonyhb/distribution/manifest"
+	"github.com/tonyhb/distribution/reference"
 	"github.com/docker/libtrust"
 )
 

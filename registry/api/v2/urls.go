@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/docker/distribution/reference"
+	"github.com/tonyhb/distribution/reference"
 	"github.com/gorilla/mux"
 )
 

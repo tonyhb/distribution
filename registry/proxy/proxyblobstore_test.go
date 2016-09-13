@@ -9,15 +9,15 @@ import (
 	"testing"
 	"time"
 
-	"github.com/docker/distribution"
-	"github.com/docker/distribution/context"
-	"github.com/docker/distribution/digest"
-	"github.com/docker/distribution/reference"
-	"github.com/docker/distribution/registry/proxy/scheduler"
-	"github.com/docker/distribution/registry/storage"
-	"github.com/docker/distribution/registry/storage/cache/memory"
-	"github.com/docker/distribution/registry/storage/driver/filesystem"
-	"github.com/docker/distribution/registry/storage/driver/inmemory"
+	"github.com/tonyhb/distribution"
+	"github.com/tonyhb/distribution/context"
+	"github.com/tonyhb/distribution/digest"
+	"github.com/tonyhb/distribution/reference"
+	"github.com/tonyhb/distribution/registry/proxy/scheduler"
+	"github.com/tonyhb/distribution/registry/storage"
+	"github.com/tonyhb/distribution/registry/storage/cache/memory"
+	"github.com/tonyhb/distribution/registry/storage/driver/filesystem"
+	"github.com/tonyhb/distribution/registry/storage/driver/inmemory"
 )
 
 var sbsMu sync.Mutex

@@ -9,7 +9,7 @@ import (
 	"time"
 
 	log "github.com/Sirupsen/logrus"
-	"github.com/docker/distribution/uuid"
+	"github.com/tonyhb/distribution/uuid"
 	"github.com/gorilla/mux"
 )
 

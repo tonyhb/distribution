@@ -8,9 +8,9 @@ import (
 	mrand "math/rand"
 	"time"
 
-	"github.com/docker/distribution"
-	"github.com/docker/distribution/context"
-	"github.com/docker/distribution/digest"
+	"github.com/tonyhb/distribution"
+	"github.com/tonyhb/distribution/context"
+	"github.com/tonyhb/distribution/digest"
 )
 
 // CreateRandomTarFile creates a random tarfile, returning it as an

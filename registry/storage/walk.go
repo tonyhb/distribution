@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/docker/distribution/context"
-	storageDriver "github.com/docker/distribution/registry/storage/driver"
+	"github.com/tonyhb/distribution/context"
+	storageDriver "github.com/tonyhb/distribution/registry/storage/driver"
 )
 
 // ErrSkipDir is used as a return value from onFileFunc to indicate that

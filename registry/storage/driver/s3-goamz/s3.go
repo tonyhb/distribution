@@ -26,11 +26,11 @@ import (
 	"github.com/docker/goamz/aws"
 	"github.com/docker/goamz/s3"
 
-	"github.com/docker/distribution/context"
-	"github.com/docker/distribution/registry/client/transport"
-	storagedriver "github.com/docker/distribution/registry/storage/driver"
-	"github.com/docker/distribution/registry/storage/driver/base"
-	"github.com/docker/distribution/registry/storage/driver/factory"
+	"github.com/tonyhb/distribution/context"
+	"github.com/tonyhb/distribution/registry/client/transport"
+	storagedriver "github.com/tonyhb/distribution/registry/storage/driver"
+	"github.com/tonyhb/distribution/registry/storage/driver/base"
+	"github.com/tonyhb/distribution/registry/storage/driver/factory"
 )
 
 const driverName = "s3goamz"
