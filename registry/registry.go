@@ -14,6 +14,8 @@ import (
 	log "github.com/Sirupsen/logrus"
 	"github.com/Sirupsen/logrus/formatters/logstash"
 	"github.com/bugsnag/bugsnag-go"
+	gorhandlers "github.com/gorilla/handlers"
+	"github.com/spf13/cobra"
 	"github.com/tonyhb/distribution/configuration"
 	"github.com/tonyhb/distribution/context"
 	"github.com/tonyhb/distribution/health"
@@ -21,10 +23,16 @@ import (
 	"github.com/tonyhb/distribution/registry/listener"
 	"github.com/tonyhb/distribution/uuid"
 	"github.com/tonyhb/distribution/version"
-	gorhandlers "github.com/gorilla/handlers"
-	"github.com/spf13/cobra"
 	"github.com/yvasiyarov/gorelic"
 )
+
+type HandlerFunc func(config *configuration.Configuration, handler http.Handler) http.Handler
+
+var handlerMiddlewares []HandlerFunc
+
+func RegisterHandler(handlerFunc HandlerFunc) {
+	handlerMiddlewares = append(handlerMiddlewares, handlerFunc)
+}
 
 // ServeCmd is a cobra command for running the registry.
 var ServeCmd = &cobra.Command{
@@ -93,6 +101,10 @@ func NewRegistry(ctx context.Context, config *configuration.Configuration) (*Reg
 	handler = panicHandler(handler)
 	if !config.Log.AccessLog.Disabled {
 		handler = gorhandlers.CombinedLoggingHandler(os.Stdout, handler)
+	}
+
+	for _, applyHandlerMiddleware := range handlerMiddlewares {
+		handler = applyHandlerMiddleware(config, handler)
 	}
 
 	server := &http.Server{

@@ -15,6 +15,9 @@ import (
 	"time"
 
 	log "github.com/Sirupsen/logrus"
+	"github.com/docker/libtrust"
+	"github.com/garyburd/redigo/redis"
+	"github.com/gorilla/mux"
 	"github.com/tonyhb/distribution"
 	"github.com/tonyhb/distribution/configuration"
 	ctxu "github.com/tonyhb/distribution/context"
@@ -35,9 +38,6 @@ import (
 	"github.com/tonyhb/distribution/registry/storage/driver/factory"
 	storagemiddleware "github.com/tonyhb/distribution/registry/storage/driver/middleware"
 	"github.com/tonyhb/distribution/version"
-	"github.com/docker/libtrust"
-	"github.com/garyburd/redigo/redis"
-	"github.com/gorilla/mux"
 	"golang.org/x/net/context"
 )
 
@@ -289,7 +289,7 @@ func NewApp(ctx context.Context, config *configuration.Configuration) *App {
 		}
 	}
 
-	app.registry, err = applyRegistryMiddleware(app, app.registry, config.Middleware["registry"])
+	app.registry, err = applyRegistryMiddleware(app, app.registry, app.driver, config.Middleware["registry"])
 	if err != nil {
 		panic(err)
 	}
@@ -929,9 +929,9 @@ func appendCatalogAccessRecord(accessRecords []auth.Access, r *http.Request) []a
 }
 
 // applyRegistryMiddleware wraps a registry instance with the configured middlewares
-func applyRegistryMiddleware(ctx context.Context, registry distribution.Namespace, middlewares []configuration.Middleware) (distribution.Namespace, error) {
+func applyRegistryMiddleware(ctx context.Context, registry distribution.Namespace, driver storagedriver.StorageDriver, middlewares []configuration.Middleware) (distribution.Namespace, error) {
 	for _, mw := range middlewares {
-		rmw, err := registrymiddleware.Get(ctx, mw.Name, mw.Options, registry)
+		rmw, err := registrymiddleware.Get(ctx, mw.Name, mw.Options, registry, driver)
 		if err != nil {
 			return nil, fmt.Errorf("unable to configure registry middleware (%s): %s", mw.Name, err)
 		}
