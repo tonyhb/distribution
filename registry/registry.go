@@ -12,7 +12,7 @@ import (
 	"rsc.io/letsencrypt"
 
 	log "github.com/Sirupsen/logrus"
-	"github.com/Sirupsen/logrus/formatters/logstash"
+	logstash "github.com/bshuster-repo/logrus-logstash-hook"
 	"github.com/bugsnag/bugsnag-go"
 	gorhandlers "github.com/gorilla/handlers"
 	"github.com/spf13/cobra"
